@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Aura - The Next Generation of Digital Experience. Elevate your brand with cutting-edge design and technology.">
+    <title>Aura | The Future of Web</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="cursor-glow"></div>
+
+    <nav class="navbar">
+        <div class="logo">AURA</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#" class="btn-primary open-modal-btn">Get Started</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content fade-in-up">
+            <h1 class="gradient-text">Experience The Extraordinary</h1>
+            <p>We blend art and state-of-the-art technology to build digital masterpieces that defy expectations.</p>
+            <div class="hero-buttons">
+                <a href="#features" class="btn-primary glow-btn">Discover More</a>
+                <a href="#showcase" class="btn-secondary">View Showcase</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="abstract-shape shape-1"></div>
+            <div class="abstract-shape shape-2"></div>
+            <div class="abstract-shape shape-3"></div>
+        </div>
+    </header>
+
+    <section id="features" class="features">
+        <h2 class="section-title fade-in-up">Pushing Boundaries</h2>
+        <div class="cards-container">
+            <div class="glass-card slide-in-left">
+                <div class="card-icon">✨</div>
+                <h3>Immersive Design</h3>
+                <p>Captivate your audience with fluid animations and stunning visual fidelity.</p>
+            </div>
+            <div class="glass-card fade-in-up delay-1">
+                <div class="card-icon">⚡</div>
+                <h3>Lightning Fast</h3>
+                <p>Engineered for performance. Experience seamless interactions with zero lag.</p>
+            </div>
+            <div class="glass-card slide-in-right delay-2">
+                <div class="card-icon">🔒</div>
+                <h3>Fort Knox Security</h3>
+                <p>Enterprise-grade protection ensuring your data is safe and sound always.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="about-content fade-in-up">
+            <h2 class="section-title">Who We Are</h2>
+            <p class="about-text">Aura is a collective of visionary designers, engineers, and strategists. We don't just
+                build websites; we craft digital ecosystems that leave a lasting impact. Our mission is to push the
+                boundaries of what is possible on the web, combining aesthetic brilliance with rock-solid engineering.
+            </p>
+            <div class="stats-container">
+                <div class="stat-box">
+                    <h3 class="gradient-text">150+</h3>
+                    <p>Projects Delivered</p>
+                </div>
+                <div class="stat-box">
+                    <h3 class="gradient-text">10B+</h3>
+                    <p>User Interactions</p>
+                </div>
+                <div class="stat-box">
+                    <h3 class="gradient-text">99%</h3>
+                    <p>Client Satisfaction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Showcase Section -->
+    <section id="showcase" class="showcase-section">
+        <h2 class="section-title fade-in-up">Selected Works</h2>
+        <div id="showcaseContainer" class="showcase-grid">
+            <!-- Projects injected here dynamically via JS -->
+        </div>
+        <div class="add-project-wrapper fade-in-up delay-2">
+            <button id="openAddProjectModal" class="btn-primary glow-btn">
+                <span>+</span> Add Project
+            </button>
+        </div>
+    </section>
+
+    <!-- Interactive CTA Section -->
+    <section class="cta-section hidden fade-in-up">
+        <div class="cta-box glass-card">
+            <h2 class="gradient-text">Ready to elevate your brand?</h2>
+            <p>Join the revolution of digital excellence.</p>
+            <button class="btn-primary glow-btn open-modal-btn"
+                style="margin-top: 2rem; font-size: 1.2rem; padding: 1rem 3rem;">Start Project</button>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">AURA</div>
+            <p>&copy; 2026 Aura Digital. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content glass-card">
+            <span class="close-modal contact-close">&times;</span>
+            <h2 class="gradient-text">Let's Talk</h2>
+            <p>Fill out the form below and we will get back to you shortly.</p>
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" rows="4" placeholder="How can we help?" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary glow-btn form-submit-btn">Send Message</button>
+            </form>
+            <div id="formSuccess" class="hidden success-message">Thanks! We'll be in touch soon.</div>
+        </div>
+    </div>
+
+    <!-- Add Project Modal -->
+    <div id="addProjectModal" class="modal">
+        <div class="modal-content glass-card">
+            <span class="close-modal project-close">&times;</span>
+            <h2 class="gradient-text">Add New Project</h2>
+            <p>Publish a new digital masterpiece to the database.</p>
+            <form id="addProjectForm" class="contact-form">
+                <div class="form-group">
+                    <input type="text" id="projectTitle" placeholder="Project Title" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="projectImage" placeholder="Image URL (e.g. https://images.unsplash.com/...)"
+                        required>
+                </div>
+                <div class="form-group">
+                    <textarea id="projectDesc" rows="3" placeholder="Short description" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary glow-btn form-submit-btn">Publish Project</button>
+            </form>
+            <div id="projectSuccess" class="hidden success-message">Project completely published!</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
